@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="text-4xl text-center font-bold mt-10">Black Jack</div>
+    <div id="play" class="text-2xl text-center mt-10">Let's Play</div>
+
+    <div
+      class="grid grid-cols-2 border-[3px] border-black bg-green-600 mt-5 mx-5 rounded-lg min-h-[45vh]"
+    >
+      <div
+        id="human-box"
+        class="p-5 font-bold text-white grid grid-cols-4 gap-2"
+      >
+        <div class="text-center col-span-4">
+          You : <span id="human-score">0</span>
+        </div>
+      </div>
+      <div
+        id="pc-box"
+        class="border-l-4 p-5 border-black font-bold text-white grid grid-cols-4 gap-2"
+      >
+        <div class="text-center col-span-4">
+          PC : <span id="pc-score">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex space-x-2 justify-center mt-10">
+      <div>
+        <button
+          id="hit"
+          type="button"
+          class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+        >
+          Hit
+        </button>
+
+        <button
+          id="stand"
+          type="button"
+          class="inline-block px-6 py-2.5 bg-teal-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-teal-600 hover:shadow-lg focus:bg-teal-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-teal-700 active:shadow-lg transition duration-150 ease-in-out"
+        >
+          Stand
+        </button>
+        <button
+          id="deal"
+          type="button"
+          class="inline-block px-6 py-2.5 bg-gray-800 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-900 hover:shadow-lg focus:bg-gray-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-900 active:shadow-lg transition duration-150 ease-in-out"
+        >
+          Deal
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <table class="flex space-x-2 justify-center mt-10 font-bold text-center">
+        <tbody class="mx-auto">
+          <tr class="">
+            <td class="w-40">Wins</td>
+            <td class="w-40">Losses</td>
+            <td class="w-40">Draws</td>
+          </tr>
+          <tr class="w-full">
+            <td id="wins" class="w-40">0</td>
+            <td id="losses" class="w-40">0</td>
+            <td id="draws" class="w-40">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ///////////////////////////// -->
+    <script src="/index.js"></script>
+  </body>
+</html>
